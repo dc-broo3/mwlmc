@@ -25,8 +25,8 @@ double native_timestep = 0.000125; // native timestep of the simulation (in viri
 int    native_steps = reference_time/native_timestep; // number of native timesteps in the simulation (does this match NUMT?)
 
 // set these parameters to tune the simulation virial units to the MW
-double mw_virial_radius        = 282.;                                  // virial radius of the MW, kpc/Rvir
-double solar_circular_velocity = 190.;                                  // circular velocity at the solar circle, km/s
+double mw_virial_radius        = 195.84; //Previously 282.;             // virial radius of the MW, kpc/Rvir
+double solar_circular_velocity = 184.; //Previously 190.;               // circular velocity at the solar circle, km/s
 double rotation_peak           = 1.4 ;                                  // peak of the rotation curve from the MW spherical model (Vvir)
 
 // derived quantities
@@ -47,7 +47,7 @@ string coef_file_mw        = model_datadir+"simpleoutcoef.nfac.mw."+runtag;
 string orient_file_mw      = model_datadir+"mw.orient."+runtag+".smth";
 
 // The MW disc tables
-string cyl_cache_name_mw   = model_datadir+"disc.cache.compact."+runtag;
+string cyl_cache_name_mw   = model_datadir+"disc.cache."+runtag;
 string cyl_coef_name_mw    = model_datadir+"outcoef.disc."+runtag;
 string cyl_orient_name_mw  = model_datadir+"disc.orient."+runtag+".smth";
 
